@@ -78,7 +78,7 @@ async def tcp_echo_client(port):
             
             if 'Get container with min CPU usage' in message:
                 min_port = get_min_cpu_usage_container()
-                response = f'Min CPU usage container port: {min_port}'
+                response = f'Min CPU usage container port: {min_port}, ports: {container_cpu_usages.keys()}'
                 writer.write(response.encode())
                 await writer.drain()
                 print(response)
