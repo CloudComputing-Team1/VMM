@@ -1,4 +1,0 @@
-psutil
-flask
-flask-socketio
-docker
